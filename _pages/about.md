@@ -3,6 +3,7 @@ layout: page
 title: About Me
 permalink: /about/
 ---
+![]({{ site.baseurl }}/images/burin_profile.jpg "burin")
 
 # Burin Sirisrimungkorn 
 ## EDUCATION
@@ -21,4 +22,6 @@ permalink: /about/
 - Deep learning Hackathon hosted by Kasetsart University (2017) : Award Winner Best Application. 
 - Academic leader in 12th Junior Programmer Camp at SIT, KMUTT (2016) : Teaching and preparing basic Python programming.
 - Raspberry PI Workshop at SIT, KMUTT (2016) : Teaching Raspberry PI for freshman.
+
+![]({{ site.baseurl }}/images/muspace.jpg "mu space")
 
