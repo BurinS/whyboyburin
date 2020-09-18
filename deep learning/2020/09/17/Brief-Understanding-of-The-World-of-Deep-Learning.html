@@ -110,11 +110,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#ปะวัติโดยย่อมากๆของ-Deep-Learning-และถือโอกาสขอบคุณทุกคนที่มีส่วนร่วมในประวัติศาสตร์ครั้งนี้">ปะวัติโดยย่อมากๆของ Deep Learning และถือโอกาสขอบคุณทุกคนที่มีส่วนร่วมในประวัติศาสตร์ครั้งนี้ </a></li>
 <li class="toc-entry toc-h2"><a href="#แล้วจริงๆ-Deep-Learning-คืออะไรถ้าเราไม่มองมันเป็นการจำลองการทำงานของสมองมนุษย์">แล้วจริงๆ Deep Learning คืออะไรถ้าเราไม่มองมันเป็นการจำลองการทำงานของสมองมนุษย์ </a></li>
 <li class="toc-entry toc-h2"><a href="#มีการพูดถึง-Representation-บ่อยมากแสดงว่ามันสำคัญใช่ไหม">มีการพูดถึง Representation บ่อยมากแสดงว่ามันสำคัญใช่ไหม </a></li>
-<li class="toc-entry toc-h2"><a href="#เราสามารถมอง-Deep-Learning-เป็น-program-ได้-โดยมองในรูปแบบ-Computation-Graph">เราสามารถมอง Deep Learning เป็น program ได้ โดยมองในรูปแบบ Computation Graph </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#"We-live-in-a-twilight-world."">&quot;We live in a twilight world.&quot; </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#เราสามารถมอง-Deep-Learning-เป็น-program-ได้-โดยมองในรูปแบบ-Computation-Graph">เราสามารถมอง Deep Learning เป็น program ได้ โดยมองในรูปแบบ Computation Graph </a></li>
 </ul>
 </li>
 </ul><!--
@@ -154,7 +150,7 @@ window.onload = wrap_img;
 <h2 id="แนวคิดดูเจ๋งดีแต่มันทำงานจริงๆยังไง?">
 <a class="anchor" href="#%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%94%E0%B8%B9%E0%B9%80%E0%B8%88%E0%B9%8B%E0%B8%87%E0%B8%94%E0%B8%B5%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87%E0%B9%86%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87?" aria-hidden="true"><span class="octicon octicon-link"></span></a>แนวคิดดูเจ๋งดีแต่มันทำงานจริงๆยังไง?<a class="anchor-link" href="#%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%94%E0%B8%B9%E0%B9%80%E0%B8%88%E0%B9%8B%E0%B8%87%E0%B8%94%E0%B8%B5%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87%E0%B9%86%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87?"> </a>
 </h2>
-<p>ให้จินตาการว่าเราต้องการสร้างหุ่นยนต์ที่สามารถบอกเราว่า วันนี้เหมาะไปเที่ยวไหม ได้แก่ เที่ยว, ไม่เที่ยว โดยหุ่นยนต์ตัวนี้จะบอกคำตอบ(ที่น่าจะเป็น)กับเราได้ก็ต่อเมื่อมันสามารถรับสัญญาณได้ว่าวันนี้ อากาศเ็นยังไงและ วันนี้คือวันอะไรของสัปดาห์ 
+<p>ให้จินตนาการว่าเราต้องการสร้างหุ่นยนต์ที่สามารถบอกเราว่า วันนี้เหมาะไปเที่ยวไหม ได้แก่ เที่ยว, ไม่เที่ยว โดยหุ่นยนต์ตัวนี้จะบอกคำตอบ(ที่น่าจะเป็น)กับเราได้ก็ต่อเมื่อมันสามารถรับสัญญาณได้ว่าวันนี้ อากาศเป็นยังไงและ วันนี้คือวันอะไรของสัปดาห์ 
 </p>
 <div class="flash">
     <svg class="octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
@@ -213,7 +209,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>ในปี 1943 เรามี model แรก ที่พยายามใช้ในการทำความเข้าใจการทำงานของสมองมนุษย์</li>
-<li>ช่วงปี 1950 perceptron model สามารถปรับ weights ได้ด้วยตนเอง (ไม่มีมนุษย์มาคอยดูและปรับ) ด้วย optimization algorithm ที่มีชื่อว่า SGD แต่ก็แก้ไขได้แค่่ปัญหาที่เป็น linear function</li>
+<li>ช่วงปี 1950 perceptron model สามารถปรับ weights ได้ด้วยตนเอง (ไม่มีมนุษย์มาคอยดูและปรับ) ด้วย optimization algorithm ที่มีชื่อว่า SGD แต่ก็แก้ไขได้แค่ปัญหาที่เป็น linear function</li>
 <li>ในปี 1969 perceptron model ไม่สามารถแก้ไขปัญหา non linear functions ได้ ซึ่งประเด็นนี้ทำให้งานวิจัย neural network แทบจะถูกทิ้งและไม่ได้รับความสนใจ</li>
 <li>มีกลุ่มของนักวิจัยที่ยังพัฒนาและสร้าง neural network อย่างเงียบๆ</li>
 <li>ประมาณช่วง 1970s มีการคิดค้น back propagation algorithm ใช้สำหรับการเรียนรู้ของ neural network ที่มีมากกว่า 2 layers แต่ก็ยังไม่เป็นที่นิยมเพราะต้องการพลังงานในการประมวลผลและข้อมูลจำนวนมาก</li>
@@ -256,9 +252,7 @@ deep learning ทำการสร้าง hirarchical representation learning
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id='"We-live-in-a-twilight-world."'>
-<a class="anchor" href="#" we-live-in-a-twilight-world. aria-hidden="true"><span class="octicon octicon-link"></span></a>"We live in a twilight world."<a class="anchor-link" href="#%22We-live-in-a-twilight-world.%22"> </a>
-</h4>
+<p>"We live in a twilight world."</p>
 <p>Tenet</p>
 
 </div>
