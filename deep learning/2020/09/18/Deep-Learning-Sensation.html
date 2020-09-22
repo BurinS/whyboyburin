@@ -211,7 +211,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_of_toes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">8.5</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number_of_toes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">7.9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -224,7 +224,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>นี่คือค่าเฉลี่ยนิ้วเท้าของนักฟุตบอลในแต่ละทีม เช่นทีมที่ 1 มีค่าเฉลี่ย 8.5 นิ้ว ส่วนทีมที่ มีค่เฉลี่ย 9.5 นิ้ว</p>
+<p>นี่คือค่าเฉลี่ยนิ้วเท้าของนักฟุตบอลในแต่ละทีม เช่นทีมที่หนึ่ง มีค่าเฉลี่ย 7.9 นิ้ว ส่วนทีมที่สอง มีค่าเฉลี่ย 9 นิ้ว</p>
 
 </div>
 </div>
@@ -280,7 +280,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.8500000000000001</pre>
+<pre>0.79</pre>
 </div>
 
 </div>
@@ -294,7 +294,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>เราทำการเอาค่าจากการทีมแรกมาเป็น input เพราะต้องการรู้ว่าทีมแรกจะชนะไหม สุดท้ายเมื่อเราเอามาใส่เข้าไปใน neural network ของเรา ผลลัพธ์คำตอบที่ได้ไม่ได้บอกว่า ชนะหรือไม่ชนะ (1 หรือ 0) แต่บอกเป็นความน่าจะเป็นที่จะชนะ ในกรณีนี้คือมีโอกาสชนะ 85% ว้าว นี่เราสามารถสร้าง neural network ที่สามารถทำการทำนายได้ว่าทีมที่เราสนใจมีโอกาสชนะไหมจากการใช้ข้อมูลค่าเฉลี่ยของนิ้วเท้านักฟุตบอลในทีม!</p>
+<p>เราทำการเอาค่าจากการทีมแรกมาเป็น input เพราะต้องการรู้ว่าทีมแรกจะชนะไหม สุดท้ายเมื่อเราเอามาใส่เข้าไปใน neural network ของเรา ผลลัพธ์คำตอบที่ได้ไม่ได้บอกว่า ชนะหรือไม่ชนะ (1 หรือ 0) แต่บอกเป็นความน่าจะเป็นที่จะชนะ ในกรณีนี้คือมีโอกาสชนะ 79% ว้าว นี่เราสามารถสร้าง neural network ที่สามารถทำการทำนายได้ว่าทีมที่เราสนใจมีโอกาสชนะไหมจากการใช้ข้อมูลค่าเฉลี่ยของนิ้วเท้านักฟุตบอลในทีม!
+</p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>ในกรณีนี้เราต้องการคำตอบออกมาเป็นความน่าจะเป็น แต่คำตอบที่เป็นไปได้ไม่ได้มีการจำกัดขอบเขต เดี๋ยวเราจะมาพูดถึงจุดนี้อีกครั้งตอน activation function
+</div>
 
 </div>
 </div>
@@ -317,7 +322,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -360,7 +365,7 @@ window.onload = wrap_img;
 <p>neural network เราเหมือนเดิมเลยคือการนำ input มาคูณกับ weight เพือ่สร้างคำตอบ แต่ แต่... คราวนี้เรามี 3 inputs และ 3 weights ดังนั้นเราก็ทำการคูณกันเป็นคู่ๆ input ไหนคู่กับ weight ไหน ก็นำมาคูณกันสุดท้ายเราจะได้ list ที่มีจำนวนสมาชิกเท่ากับ 3 เพราะเกิดจากการคูณกันของแต่ละคู่ แต่ประเด็นคือเราต้องให้คำตอบออกมาเป็นค่าเดียวนั่นคือความนน่าจะเป็นที่ทีมฟุตบอลของเราจะชนะ แล้วเราจะทำยังไงดี ง่ายมากเราก็แค่เอาผลลัพธ์ที่ได้จากการคูณกันของแต่ละคู่มาบวกรวมกันเป็นค่าเดียว นี่คือคำตอบของเรา!
 </p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>การคูณกันตามตำแหน่งที่ตรงกันและนำผลลัพธ์จากการคูณกันของแต่ละตำแหน่งมารวมกันเราเรียกว่า weight sum หรือมองเป็นการนำ 2 vectors มาทำ dot product กันนั่นเอง
 </div>
 
@@ -374,9 +379,9 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">toes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">8.5</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">])</span>
-<span class="n">win_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
-<span class="n">nfans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">toes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">7.9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">win_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
+<span class="n">nfans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -401,7 +406,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">toes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">wlrec</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nfans</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">toes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">win_loss</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nfans</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
 <span class="n">pred</span> <span class="o">=</span> <span class="n">neural_network</span><span class="p">(</span><span class="n">x_input</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span>
 </pre></div>
@@ -416,7 +421,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.9800000000000001
+<pre>0.98
 </pre>
 </div>
 </div>
@@ -444,7 +449,7 @@ window.onload = wrap_img;
 <p>ตอนนี้ neural network สามารถให้คำตอบกับเราได้ว่าทีมเราจะชนะหรือแพ้ แล้วถ้าเราบอกว่าเราอยากรู้ด้วยว่าทีมนี้เมื่อแข่งเสร็จมีโอกาสจะเกิดการบาดเจ็บไหม ยิ่งกว่านั้นอยากรู้ด้วยว่าหลังแข่งเสร็จทีมนีจะอารมณ์เป็นยังไง
 </p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>output เราจะมีทั้งหมด 3 ตัวแปร ได้แก่ 1.บาดเจ็บ (1) หรือ ไม่บาดเจ็บ (0) 2. ชนะ (1) หรือ แพ้ (0) 3. ดีใจ (1) หรือ เสียใจ (0) โดยทั้งหมดค่าจะบ่งบอกถึงความน่าจะเป็น 
 </div>
 
@@ -458,13 +463,13 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight_0_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">],</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight_0_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span>
                    <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">],</span> 
                    <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
 
-<span class="n">weight_1_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">],</span> 
-                   <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> 
-                   <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">weight_1_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.12</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">],</span> 
+                   <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+                   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
 
 <span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="n">weight_0_1</span><span class="p">,</span> <span class="n">weight_1_2</span><span class="p">]</span>
 </pre></div>
@@ -496,11 +501,11 @@ window.onload = wrap_img;
     <span class="n">pred</span> <span class="o">=</span> <span class="n">hid</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">weights</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">pred</span>
 
-<span class="n">toes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">8.5</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">])</span>
-<span class="n">wlrec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
-<span class="n">nfans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">toes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">7.9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">win_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
+<span class="n">nfans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">])</span>
 
-<span class="nb">input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">toes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">wlrec</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nfans</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+<span class="nb">input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">toes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">win_loss</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">nfans</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
 <span class="n">pred</span> <span class="o">=</span> <span class="n">neural_network</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
 <span class="n">pred</span>
 </pre></div>
@@ -517,7 +522,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0.2135, 0.145 , 0.5065])</pre>
+<pre>array([0.1454, 0.1405, 0.334 ])</pre>
 </div>
 
 </div>
@@ -531,7 +536,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>เมื่อเรานำทีมแรกใส่เข้าไปใน neural network program จะได้คำตอบออกมาเป็น โอกาสในการบาดเจ็บ 21.35%, โอกาสในการชนะ 14.5% และโอกาสที่จะดีใจ 50.65% สังเกตว่าตอนนี้ program เราสามารถรับ inputs ได้หลายตัวแปร และให้คำตอบได้หลายคำตอบ โดยการปรับตัวสมการเพิ่มเติมเล็กน้อย</p>
+<p>เมื่อเรานำทีมแรกใส่เข้าไปใน neural network program จะได้คำตอบออกมาเป็น โอกาสในการบาดเจ็บ 14.54%, โอกาสในการชนะ 14.05% และโอกาสที่จะดีใจ 33.4% สังเกตว่าตอนนี้ program เราสามารถรับ inputs ได้หลายตัวแปร และให้คำตอบได้หลายคำตอบ โดยการปรับตัวสมการเพิ่มเติมเล็กน้อย</p>
 
 </div>
 </div>
@@ -560,8 +565,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">x_input</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">x_input</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="n">goal_pred</span> <span class="o">=</span> <span class="mf">0.8</span>
 <span class="n">pred</span> <span class="o">=</span> <span class="n">x_input</span> <span class="o">*</span> <span class="n">weight</span>
 <span class="n">pred</span>
@@ -579,7 +584,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.25</pre>
+<pre>0.04000000000000001</pre>
 </div>
 
 </div>
@@ -593,7 +598,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>กำหนดให้ weight เริ่มต้นมีค่าเท่ากับ 0.5 และให้ input มีค่า 0.5 ส่วนคำตอบที่ควรจะเป็นมีค่า 0.8 สุดท้าย เราทำการใส่ input เข้าไปใน program เพื่อทำการคำนวณหาคำตอบและได้คพตอบออกมาเป็น 0.25</p>
+<p>กำหนดให้ weight เริ่มต้นมีค่าเท่ากับ 0.1 และให้ input มีค่า 0.4 ส่วนคำตอบที่ควรจะเป็นมีค่า 0.8 สุดท้าย เราทำการใส่ input เข้าไปใน program เพื่อทำการคำนวณหาคำตอบและได้คำตอบออกมาเป็น 0.4</p>
 
 </div>
 </div>
@@ -621,7 +626,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.30250000000000005</pre>
+<pre>0.5776</pre>
 </div>
 
 </div>
@@ -641,13 +646,13 @@ window.onload = wrap_img;
     <svg class="octicon octicon-zap octicon octicon-zap" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.561 1.5a.016.016 0 00-.01.004L3.286 8.571A.25.25 0 003.462 9H6.75a.75.75 0 01.694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0012.538 7H9.25a.75.75 0 01-.683-1.06l2.008-4.418.003-.006a.02.02 0 00-.004-.009.02.02 0 00-.006-.006L10.56 1.5zM9.504.43a1.516 1.516 0 012.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 01-.871.354h-.302a1.25 1.25 0 01-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429z"></path></svg>
     <strong>Important: </strong>ในกรณีที่เรามีการหาค่าเฉลี่ยของ error จากกลุ่มของ example การยกกำลังจะช่วยให้เราไม่เผลอ cancel ค่า error ของแต่ละ example กันเองจนทำให้ error ต่ำกว่าที่ควรจะเป็น เพราะเราพิจารณาว่ามันจะเป็นบวกหรือลบยังไงมันก็คือ error และการยกกำลังยังมีอีกความหมายคือสนใจความผิดพลาดที่ใหญ่ และปล่อยผ่านความผิดพลาดเล็กๆ
 </div>
-<p>สุดท้าย error ที่คำนวณออกมามีค่าเท่ากับ 0.3025 
+<p>สุดท้าย error ที่คำนวณออกมามีค่าเท่ากับ 0.5776 
 โอเค! เรารู้ error แล้ว ต่อไปต้องทำยังไงต่อ</p>
 <h2 id="เพิ่มหรือลด-weight-ดีนะ?">
 <a class="anchor" href="#%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%A5%E0%B8%94-weight-%E0%B8%94%E0%B8%B5%E0%B8%99%E0%B8%B0?" aria-hidden="true"><span class="octicon octicon-link"></span></a>เพิ่มหรือลด weight ดีนะ?<a class="anchor-link" href="#%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%A5%E0%B8%94-weight-%E0%B8%94%E0%B8%B5%E0%B8%99%E0%B8%B0?"> </a>
 </h2>
 <p>เราลองมาช่วยกันคิดกันว่าวิธีที่ง่ายที่สุดในการปรับ weights ทั้งหลายคืออะไรนะ อืม....
-โอเค! ลองนี่ไหม เรามี input 1 ค่า เราทำการสร้่าง input มาอีก 2 ค่า</p>
+โอเค! ลองนี่ไหม เรามี input 1 ค่า เราทำการสร้าง input มาอีก 2 ค่า</p>
 <ol>
 <li>เอา input ที่เราสนใจมาเพิ่มค่าด้วยจำนวนน้อยมากๆ</li>
 <li>เอา input ที่เราสนใจมาลดค่าด้วยจำนวนที่น้อยมากๆ
@@ -664,8 +669,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">x_input</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">x_input</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="n">goal_prediction</span> <span class="o">=</span> <span class="mf">0.8</span>
 <span class="n">step_amount</span> <span class="o">=</span> <span class="mf">0.001</span>
 </pre></div>
@@ -692,7 +697,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2000</span><span class="p">):</span>
     
     <span class="n">prediction</span> <span class="o">=</span> <span class="n">x_input</span> <span class="o">*</span> <span class="n">weight</span>
     <span class="n">error</span> <span class="o">=</span> <span class="p">(</span><span class="n">prediction</span> <span class="o">-</span> <span class="n">goal_prediction</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
@@ -722,7 +727,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error:1.0799505792475652e-27 Prediction:0.7999999999999672
+<pre>Error:1.5999999996497053e-07 Prediction:0.8003999999999563
 </pre>
 </div>
 </div>
@@ -750,7 +755,7 @@ window.onload = wrap_img;
 <p>ก่อนหน้านี้เรารู้แค่ direction ว่า weight ควรจะเพิ่มหรือลด แต่ว่าจำนวนที่ใช้ในการปรับเปลี่ยนเรากำหนดเอง แล้วถ้าเราอยากได้จำนวนคร่าวๆที่เหมาะสมในการปรับเปลี่ยน weight ละ แน่นอนมีวิธีและวิธีการนั้นเรียบง่ายมากเราหยิบเอาตัวแปรออกมา 2 ตัวเพื่อดูความสัมพันธ์จากนั้นดูต่อว่าถ้าเราปรับตัวแปรตัวหนึ่งแล้วตัวแปรอีกตัวมีการเปลี่ยนแปลงไปยังไง 
 </p>
 <div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>การหาความสัมพันธ์และทำความเข้าใจระหว่าง 2 ตัวแปรก็คือวิชา Calculus ที่เราเคยเรียนกันั่นเอง!
 </div>
 <p>แน่นอนว่าตัวแปรที่เราปรับได้คือ weight และตัวแปรที่เราสังเกตคือ error ว่าเมื่อเราปรับ weight ขึ้นไปนิดนึง error จะมีแนวโน้มยังไง นี่แหละ! เราได้ทั้ง direction และ amount ว่าแต่ทำไม amount ถึงใช้ได้ละลองคิดว่าถ้า error มีการเพิ่มขึ้นอย่างมาก แสดงว่าค่า weight ของเราอยู่ห่างจากค่า weight ที่เหมาะสมพอสมควร (เนื่องจากการคำนวณ error ของเรามีการยกกำลังด้วย)เพราะฉะนั้นเราสามารถปรับ weight ด้วย amount ขนาดใหญ่ตามที่ได้จากการคำนวณได้เลย</p>
@@ -765,7 +770,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span><span class="p">,</span> <span class="n">goal_pred</span><span class="p">,</span> <span class="n">x_input</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span><span class="p">,</span> <span class="n">goal_pred</span><span class="p">,</span> <span class="n">x_input</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
     
@@ -787,7 +792,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error: 1.1700484786446364e-25 Prediction: 0.799999999999658
+<pre>Error: 5.873890229282722e-16 Prediction: 0.7999999757638901
 </pre>
 </div>
 </div>
@@ -820,7 +825,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">goal_pred</span> <span class="o">=</span> <span class="mf">0.8</span>
 <span class="n">x_input</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -843,7 +848,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error: 5.403406870691965e+16 Prediction: -232452292.5999999
+<pre>Error: 4.8630661836227725e+17 Prediction: 697356881.0
 </pre>
 </div>
 </div>
@@ -874,7 +879,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">x_input</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">goal_pred</span> <span class="o">=</span> <span class="mf">0.8</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.1</span>
@@ -899,7 +904,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error: 1.485277170987127e-10 Prediction: 0.8000121871948003
+<pre>Error: 1.336749453880296e-09 Prediction: 0.7999634384155995
 </pre>
 </div>
 </div>
