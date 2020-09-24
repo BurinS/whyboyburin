@@ -106,9 +106,9 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#ทำการ-Preprocess-รูปภาพ">ทำการ Preprocess รูปภาพ </a></li>
-<li class="toc-entry toc-h1"><a href="#ทำไมเราต้องทำการแปลงคำตอบให้อยู่ในรูปของ-Vector-?">ทำไมเราต้องทำการแปลงคำตอบให้อยู่ในรูปของ Vector ? </a>
+<li class="toc-entry toc-h1"><a href="#ทำไมเราต้องทำการแปลงคำตอบให้อยู่ในรูปของ-Vector-?">ทำไมเราต้องทำการแปลงคำตอบให้อยู่ในรูปของ Vector ? </a></li>
+<li class="toc-entry toc-h1"><a href="#ก่อนมาเริ่มทำการสร้าง-Neural-Network-program-มารู้จัก-Activation-function-กันก่อน">ก่อนมาเริ่มทำการสร้าง Neural Network program มารู้จัก Activation function กันก่อน </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#ก่อนมาเริ่มทำการสร้าง-Neural-Network-program-มารู้จัก-Activation-function-กันก่อน">ก่อนมาเริ่มทำการสร้าง Neural Network program มารู้จัก Activation function กันก่อน </a></li>
 <li class="toc-entry toc-h2"><a href="#คุณสมบัติของ-Activation-function">คุณสมบัติของ Activation function </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#1.-Activation-functions-ต้องเป็น-Continuous-function">1. Activation functions ต้องเป็น Continuous function </a></li>
@@ -117,14 +117,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#4.-Activation-functions-ต้องสามารถคำนวณได้ในเชิงใช้งานจริง-รวมถึง-derivative-ของตัว-function-เองด้วย">4. Activation functions ต้องสามารถคำนวณได้ในเชิงใช้งานจริง รวมถึง derivative ของตัว function เองด้วย </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#เรามาดู-Activation-functions-ที่ถูกใช้ใน-Hidden-layer-กันดีกว่า">เรามาดู Activation functions ที่ถูกใช้ใน Hidden layer กันดีกว่า </a>
+<li class="toc-entry toc-h2"><a href="#เรามาดู-Activation-functions-ที่ถูกใช้ใน-Hidden-layer-กัน">เรามาดู Activation functions ที่ถูกใช้ใน Hidden layer กัน </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#1.-Sigmoid-function">1. Sigmoid function </a></li>
 <li class="toc-entry toc-h3"><a href="#2.-tanh-function">2. tanh function </a></li>
 <li class="toc-entry toc-h3"><a href="#3.relu-function">3.relu function </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#เรามาดู-Activation-functions-ที่ถูกใช้ใน-Hidden-layer-กันดีกว่า">เรามาดู Activation functions ที่ถูกใช้ใน Hidden layer กันดีกว่า </a>
+<li class="toc-entry toc-h2"><a href="#เรามาดู-Activation-functions-ที่ถูกใช้ใน-output-layer-กัน">เรามาดู Activation functions ที่ถูกใช้ใน output layer กัน </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#1.-ต้องการคำตอบที่เป็น-Numeric">1. ต้องการคำตอบที่เป็น Numeric </a></li>
 <li class="toc-entry toc-h3"><a href="#2.-มีคำตอบหลายคำตอบและมีคำตอบที่ถูกต้องมากกว่า-1-คำตอบ">2. มีคำตอบหลายคำตอบและมีคำตอบที่ถูกต้องมากกว่า 1 คำตอบ </a></li>
@@ -141,6 +141,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#พอแล้ว-Theory-มาลงมือจริงกันเลยดีกว่า">พอแล้ว Theory มาลงมือจริงกันเลยดีกว่า </a></li>
 <li class="toc-entry toc-h1"><a href="#สุดท้ายแล้ว-ถ้าเราอยากทำ-Batch-Gradient-Descent-ละจะทำยังไง">สุดท้ายแล้ว ถ้าเราอยากทำ Batch Gradient Descent ละจะทำยังไง </a></li>
+<li class="toc-entry toc-h1"><a href="#Acknowledge">Acknowledge </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
@@ -408,9 +409,9 @@ MNIST ได้ถูก Yann Lecun นำไปใช้ในปี 1998 ส�
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>จะเห็นได้ว่าเราเปลี่ยนคำตอบที่แสดงในรูปแบบ numeric ให้กลายเป็น one hot vector ได้สำเร็จ</p>
-<h2 id="ก่อนมาเริ่มทำการสร้าง-Neural-Network-program-มารู้จัก-Activation-function-กันก่อน">
+<h1 id="ก่อนมาเริ่มทำการสร้าง-Neural-Network-program-มารู้จัก-Activation-function-กันก่อน">
 <a class="anchor" href="#%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%97%E0%B8%B3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-Neural-Network-program-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81-Activation-function-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99" aria-hidden="true"><span class="octicon octicon-link"></span></a>ก่อนมาเริ่มทำการสร้าง Neural Network program มารู้จัก Activation function กันก่อน<a class="anchor-link" href="#%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%97%E0%B8%B3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-Neural-Network-program-%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81-Activation-function-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99"> </a>
-</h2>
+</h1>
 <p>ก่อนอื่นในแต่ละ layer (ที่ไม่ใช่ output layer) เรายังไม่มีการใช้ activation function ในรอบนี้เราจะมาใช้กัน โดย function ที่เราจะใช้ก็คือ relu นั่นเอง ฟังก์ชันมีความง่ายมากนั่นคือ ถ้าค่ามากกว่า 0 ให้ทำการคงคำตอบค่าเดิมเอาไว้ แต่ถ้าค่าน้อยกว่าหรือเท่ากับ 0 ให้ทำการแปลงคำตอบให้กลายเป็น 0 
 </p>
 <div class="flash flash-error">
@@ -502,8 +503,8 @@ MNIST ได้ถูก Yann Lecun นำไปใช้ในปี 1998 ส�
 <a class="anchor" href="#4.-Activation-functions-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87-%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%96%E0%B8%B6%E0%B8%87-derivative-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7-function-%E0%B9%80%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Activation functions ต้องสามารถคำนวณได้ในเชิงใช้งานจริง รวมถึง derivative ของตัว function เองด้วย<a class="anchor-link" href="#4.-Activation-functions-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87-%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%96%E0%B8%B6%E0%B8%87-derivative-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7-function-%E0%B9%80%E0%B8%AD%E0%B8%87%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2"> </a>
 </h3>
 <p>ง่ายๆก็คือสามารถคำนวณได้ และต้องเร็ว เนื่องจาก activation functions จะต้องถูกเรียกบ่อยมากๆ</p>
-<h2 id="เรามาดู-Activation-functions-ที่ถูกใช้ใน-Hidden-layer-กันดีกว่า">
-<a class="anchor" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-Hidden-layer-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>เรามาดู Activation functions ที่ถูกใช้ใน Hidden layer กันดีกว่า<a class="anchor-link" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-Hidden-layer-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2"> </a>
+<h2 id="เรามาดู-Activation-functions-ที่ถูกใช้ใน-Hidden-layer-กัน">
+<a class="anchor" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-Hidden-layer-%E0%B8%81%E0%B8%B1%E0%B8%99" aria-hidden="true"><span class="octicon octicon-link"></span></a>เรามาดู Activation functions ที่ถูกใช้ใน Hidden layer กัน<a class="anchor-link" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-Hidden-layer-%E0%B8%81%E0%B8%B1%E0%B8%99"> </a>
 </h2>
 <p>functions ที่ใช้กันผมจะขอยกตัวอย่างมา 3 functions</p>
 <h3 id="1.-Sigmoid-function">
@@ -609,7 +610,7 @@ MNIST ได้ถูก Yann Lecun นำไปใช้ในปี 1998 ส�
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>ความจริงในส่วนของ derivative function ค่า input จะต้องเป็น x ไมา่ใช่ output แต่เพื่อความง่ายในการคำนวณเมื่อสร้าง neural network program เราจะใช้แบบนี้ในการคำนวณ (ไม่ส่งผลต่อคำตอบ เพราะจำนวนติดลบก็ถูกแปลงเป็น 0 และ ค่า 0 ใส่คำไปใน derivative function ของ relu ก็ให้คำตอบเป็น 0 อยู่ดี)</p>
+<p>ความจริงในส่วนของ derivative function ค่า input จะต้องเป็น x ไม่ใช่ output แต่เพื่อความง่ายในการคำนวณเมื่อสร้าง neural network program เราจะใช้แบบนี้ในการคำนวณ (ไม่ส่งผลต่อคำตอบ เพราะจำนวนติดลบก็ถูกแปลงเป็น 0 และ ค่า 0 ใส่คำไปใน derivative function ของ relu ก็ให้คำตอบเป็น 0 อยู่ดี)</p>
 
 </div>
 </div>
@@ -617,8 +618,8 @@ MNIST ได้ถูก Yann Lecun นำไปใช้ในปี 1998 ส�
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="เรามาดู-Activation-functions-ที่ถูกใช้ใน-Hidden-layer-กันดีกว่า">
-<a class="anchor" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-Hidden-layer-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>เรามาดู Activation functions ที่ถูกใช้ใน Hidden layer กันดีกว่า<a class="anchor-link" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-Hidden-layer-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B5%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2"> </a>
+<h2 id="เรามาดู-Activation-functions-ที่ถูกใช้ใน-output-layer-กัน">
+<a class="anchor" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-output-layer-%E0%B8%81%E0%B8%B1%E0%B8%99" aria-hidden="true"><span class="octicon octicon-link"></span></a>เรามาดู Activation functions ที่ถูกใช้ใน output layer กัน<a class="anchor-link" href="#%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B8%94%E0%B8%B9-Activation-functions-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99-output-layer-%E0%B8%81%E0%B8%B1%E0%B8%99"> </a>
 </h2>
 <p>จะขอแบ่งการใช้ activation จากปัญหาออกเป็น 3 รูปแบบนะครับ</p>
 <h3 id="1.-ต้องการคำตอบที่เป็น-Numeric">
@@ -1084,6 +1085,19 @@ Test Accuracy: 0.8426
     <strong>Note: </strong>ถ้าใช้ sigmoid หรือ tanh เป็น hidden layer activation function อย่าลืม random weights ให้เข้าใกล้ 0 เพื่อที่ค่า derivatives จะได้ไม่เข้าใกล้ 0 เกินไปจน program ยากที่จะเรียนรู้หรือปรับปรุง weights
 </div>
 หวังว่าทุกคนที่เข้ามาอ่านจะสนุกและได้ความรู้กันนะครับ
+<h1 id="Acknowledge">
+<a class="anchor" href="#Acknowledge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledge<a class="anchor-link" href="#Acknowledge"> </a>
+</h1>
+<p>Thank you for all the knowledges from</p>
+<ul>
+<li>Deep Learning: Ian Goodfellow and Yoshua Bengio and Aaron Courville</li>
+<li>Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems: Aurelien Geron</li>
+<li>Deep Learning with Python: François Chollet</li>
+<li>Neural Networks and Deep Learning: Michael Nielsen</li>
+<li>Grokking Deep Learning: Andrew W. Trask</li>
+<li>Deep Learning Specialization: Andrew Ng</li>
+<li>Python Data Science Handbook: Essential Tools for Working with Data: Jake VanderPlas</li>
+</ul>
 <p>"If you cannot sleep in the night, you need more time to understand it"</p>
 <p>Burin Sirisrimungkorn</p>
 
