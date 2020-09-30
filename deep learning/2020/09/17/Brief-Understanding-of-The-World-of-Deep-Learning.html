@@ -113,6 +113,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#เราสามารถมอง-Deep-Learning-เป็น-program-ได้-โดยมองในรูปแบบ-Computation-Graph">เราสามารถมอง Deep Learning เป็น program ได้ โดยมองในรูปแบบ Computation Graph </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#Note">Note </a></li>
 <li class="toc-entry toc-h1"><a href="#Acknowledge">Acknowledge </a></li>
 </ul><!--
 #################################################
@@ -246,6 +247,10 @@ deep learning ทำการสร้าง hirarchical representation learning
 <li>ความลึกของ Graph คือ steps ในรูปแบบ Sequence (Layers)</li>
 <li>ความกว้างของ Graph คือ steps ในรูปแบบ Parallel (Nodes ในแต่ละ layer)</li>
 </ul>
+<h1 id="Note">
+<a class="anchor" href="#Note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note<a class="anchor-link" href="#Note"> </a>
+</h1>
+<p>การเพิ่มจำนวน feautures ทำให้ model เราแก้ปัญหาได้ดีขึ้นไหม ขึ้นอยู่กับโจทย์ปัญหาของเราให้มองว่าการเพิ่มจำนวน features ก็เหมือนกับการเพิ่ม operation แบบขนาน ส่งผลให้สมการซับซ้อนเพิ่มขึ้น แต่การเพิ่มด้วยแค่ operator คูณและบวก ทำให้ซับซ้อนเพิ่มขึ้นก็จริง แต่ก็อาจจะยังไม่ซับซ้อนพอสำหรับบางปัญหา และก็มีความท้าทายที่จะออกแบบให้ operations แบบขนานมีความซับซ้อนเทียบกับการเพิ่ม operations แบบ sequence (ซึ่งจริงๆ operation sequence ถ้ามองเป็นสมการเดียวก็คือสมการที่ซับซ้อน แต่ในทาง mental เราจะรู้สึกว่ามันง่ายกว่าเพราะเรามองเป็น step และแต่ละ step ก็ใช้ simple transformation)</p>
 <h1 id="Acknowledge">
 <a class="anchor" href="#Acknowledge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledge<a class="anchor-link" href="#Acknowledge"> </a>
 </h1>
